@@ -76,8 +76,12 @@ super + shift + m
 super + shift + b
   xdotool type $(grep -v '^#' ~/Documents/Notes/Wiki/Bookmarks.md | rofi -dmenu -i)
 
+#Rofi Calc
 super + shift + c
   rofi -show calc -modi calc -no-show-match -no-sort
+#passmenu
+super + shift + p
+  passmenu
 
 #
 # focus/swap
