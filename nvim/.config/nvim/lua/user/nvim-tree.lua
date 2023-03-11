@@ -15,6 +15,9 @@ nvim_tree.setup {
     enable = true,
     update_cwd = true,
   },
+  -- filters = {
+  --   custom = {'src'},
+  -- },
   renderer = {
     root_folder_modifier = ":t",
     icons = {
