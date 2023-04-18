@@ -9,4 +9,3 @@ require "user.lsp.null-ls"
 
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
-
