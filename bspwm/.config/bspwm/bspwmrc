@@ -61,3 +61,7 @@ xsetroot -cursor_name left_ptr &
 # Low battery notifier
 ~/.config/bspwm/scripts/low_bat_notifier.sh
 
+#Java Fix Intellij
+
+wmname LG3D
+export _JAVA_AWT_WM_NONREPARENTING=1
