@@ -2,7 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+
+if [[ $(xrandr -q | grep 'DP2 connected') ]]
+then
+  bspc monitor eDP1 -d I II III IV 
+  bspc monitor DP2 -d VI VII VIII IX X
+else
+  bspc monitor -d I II III IV V VI VII VIII IX X
+fi
 
 bspc config border_width         3
 bspc config window_gap          4
@@ -34,7 +41,7 @@ bspc config active_border_color         "#C69749"
 # Autostart
 #
 # Set display from arandr saved script
-sh ~/.screenlayout/monitor.sh &
+# sh ~/.screenlayout/monitor.sh &
 # Bar
 ~/.config/polybar/launch.sh &
 # Notifications

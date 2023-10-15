@@ -7,4 +7,11 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar
-polybar top -c ~/.config/polybar/config.ini &
+
+if [[ $(xrandr -q | grep 'DP2 connected') ]];
+then
+  polybar top -c ~/.config/polybar/config.ini &
+  polybar top_external -c ~/.config/polybar/config.ini & 
+else
+  polybar top -c ~/.config/polybar/config.ini &
+fi
