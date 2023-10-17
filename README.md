@@ -38,6 +38,8 @@ I will just leave a reminder here to make an install.sh script with these progra
   - tree
   - wireguard-tools
   - xdotool
+  - obsidian
+  - intellij
   - yay
   - zathura
     - zathura-cb
